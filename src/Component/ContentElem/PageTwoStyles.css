@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contents {
+  display: grid;
+  padding: 50px 10px 30px 10px;
+  gap: 10px;
+  grid-template-columns: 15% auto;
+  grid-template-rows: 7% auto;
+  grid-template-areas:
+    "A C C C C C C C C C C C"
+    "B C C C C C C C C C C C"
+    "B C C C C C C C C C C C"
+    "B C C C C C C C C C C C"
+    "B C C C C C C C C C C C";
+}
+
+.contentBg {
+  background-color: #84db9e;
+}
+
+.titleArea {
+  grid-area: A;
+
+  border: 1px solid #6f47d7;
+  border-radius: 10px 10px 0 0;
+  color: white;
+
+  -ms-user-select: none;
+
+  /**
+             * Для мозилы
+             */
+  -moz-user-select: none;
+
+  /**
+             * Для конкверора
+             */
+  -khtml-user-select: none;
+
+  /**
+             * Для Сафари и Хрома
+             */
+  -webkit-user-select: none;
+}
+
+.elementArea {
+  grid-area: B;
+
+  border: 1px solid #6f47d7;
+  border-radius: 0 0 10px 10px;
+
+  -ms-user-select: none;
+
+  /**
+             * Для мозилы
+             */
+  -moz-user-select: none;
+
+  /**
+             * Для конкверора
+             */
+  -khtml-user-select: none;
+
+  /**
+             * Для Сафари и Хрома
+             */
+  -webkit-user-select: none;
+}
+
+.reactflow-wrapper {
+  grid-area: C;
+
+  border: 1px solid #6f47d7;
+  border-radius: 10px;
+}
+
+.elementArea div {
+  margin-bottom: 20px;
+}
+
+.elementArea img {
+  width: 50%;
+}

@@ -1,0 +1,18 @@
+.form-switch .form-check-input {
+  background-color: white;
+  transform: scale(1.2);
+}
+
+.form-switch .form-check-input:checked {
+  background-color: green;
+  border-color: green;
+}
+
+.form-switch .form-check-input:focus {
+  box-shadow: 0 0 2px 2px rgb(15, 100, 36);
+  border-color: rgb(15, 100, 36);
+}
+
+.form-range:checked {
+  background-color: green;
+}
