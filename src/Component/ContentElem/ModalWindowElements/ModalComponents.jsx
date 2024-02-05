@@ -270,9 +270,6 @@ const ModalComponents = ({ elements, valueInput, setValueInput }) => {
         );
     }
   };
-
-  console.log(valueInput);
-
   return (
     <>
       {headersElements.map((elem, i) => (

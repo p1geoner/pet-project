@@ -61,6 +61,7 @@ const styleLabel = {
 let idArm = 1;
 let idServer = 1;
 let idSwitch = 1;
+let idcustomNode = 0;
 //const getId = () => `dndnode_${id++}`;
 
 const getId = (type) => {
@@ -71,6 +72,8 @@ const getId = (type) => {
       return `Серв. гр. №${idServer++}`;
     case "switchNode":
       return `Switch №${idSwitch++}`;
+    case "customNode":
+      return `customNode №${idcustomNode++}`;
     default:
       return "Error 404";
   }
@@ -132,10 +135,32 @@ const ContentPageTwo = ({ settingPropertie }) => {
     );
   };
 
+  const CustomNewNode = ({ id }) => {
+    const item =JSON.parse(localStorage.getItem('item'));
+    const styles = {
+      backgroundImage: `url(${item.image})`,
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+      height: "55px",
+      width: "50px"
+    };
+    console.log(item)
+    return (
+        <div style={styles}>
+          <Handle type="source" position={Position.Bottom} id="Bottom" />
+          <img src={item.image} width={50} height={50} alt=""/>
+          <Handle type="target" position={Position.Top} id="Top" />
+          <span style={{ ...styleLabel, top: "38px" }}>{item.title}</span>
+        </div>
+    );
+  };
+
   const nodeTypes = {
     armNode: CustomArmNode,
     serverNode: CustomServerNode,
-    switchNode: CustomSwitchNode
+    switchNode: CustomSwitchNode,
+    customNode: CustomNewNode
   };
 
   const onConnect = useCallback(

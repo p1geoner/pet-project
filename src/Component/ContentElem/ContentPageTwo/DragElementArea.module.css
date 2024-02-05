@@ -1,0 +1,15 @@
+.file {
+    display: none;
+}
+.fileButton {
+    background: #1d1d1d;
+    height: 217px;
+    width: 100%;
+}
+.fileInput {
+    background-position: center;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid black;
+}
